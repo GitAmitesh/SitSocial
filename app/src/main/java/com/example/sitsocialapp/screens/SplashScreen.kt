@@ -12,12 +12,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.sitsocialapp.R
-import com.example.sitsocialapp.ui.theme.Purple80
+import com.example.sitsocialapp.ui.theme.BackgroundColor
+import com.example.sitsocialapp.ui.theme.fontLogoFamily
 import kotlinx.coroutines.delay
 
 
@@ -40,17 +39,18 @@ fun SplashScreen(navController: NavController, splashDisplayed: ()-> Unit) {
         )
         delay(2000)
         splashDisplayed()
-
+//        navController.navigate("WelcomeScreen")
     }
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
-            .background(Purple80)
+            .background(BackgroundColor)
     ){
         Text(
             text = "Sit Social",
             fontSize = 80.sp,
-            fontFamily = FontFamily(Font(R.font.playball)),
+            fontFamily = fontLogoFamily,
+            color = Color.White,
             modifier = Modifier.scale(scale.value)
         )
     }

@@ -7,10 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.example.sitsocialapp.R
+import com.example.sitsocialapp.ui.theme.fontAccentFamily
 
 @Composable
 fun SecondScreen(){
@@ -19,7 +17,7 @@ fun SecondScreen(){
     ){
         Text(text = "Second Screen",
             fontSize = 24.sp,
-            fontFamily = FontFamily(Font(R.font.playball)),
+            fontFamily = fontAccentFamily,
             color = Color.Black
         )
     }
